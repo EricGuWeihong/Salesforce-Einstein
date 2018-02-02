@@ -1,0 +1,14 @@
+//Create a Dataset
+curl -X POST -H "Authorization: Bearer MAUAND7SB4NLXNWZLU37KDXFGXM5FUAAXJJ3DHXDEHVY54VXKQT3YQ4LCA5NXRD7KA7TOQ4ZROJXGNAA3UAYEQIL6Z4OFPR2AWRV3VA" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "type=text-intent" -F "path=https://app.box.com/s/my22kax89898kf1eftfrlkbmj16nvzqn" https://api.einstein.ai/v2/language/datasets/upload
+
+//Get the Dataset Status
+curl -X GET -H "Authorization: Bearer <TOKEN>" -H "Cache-Control: no-cache" https://api.einstein.ai/v2/language/datasets/<DATASET_ID>
+
+//Train the Dataset
+curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "name=Service Request Routing Model" -F "datasetId=<DATASET_ID>" https://api.einstein.ai/v2/language/train
+
+//Get the Training Status
+curl -X GET -H "Authorization: Bearer <TOKEN>" -H "Cache-Control: no-cache" https://api.einstein.ai/v2/language/train/<MODEL_ID>
+
+//Try out the Model
+curl -X POST -H "Authorization: Bearer <TOKEN>" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "modelId=<MODEL_ID>" -F "document=I'd like to buy some shoes" https://api.einstein.ai/v2/language/intent
