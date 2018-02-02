@@ -1,5 +1,5 @@
 //Create a Dataset
-curl -X POST -H "Authorization: Bearer MAUAND7SB4NLXNWZLU37KDXFGXM5FUAAXJJ3DHXDEHVY54VXKQT3YQ4LCA5NXRD7KA7TOQ4ZROJXGNAA3UAYEQIL6Z4OFPR2AWRV3VA" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "type=text-intent" -F "path=https://app.box.com/s/my22kax89898kf1eftfrlkbmj16nvzqn" https://api.einstein.ai/v2/language/datasets/upload
+curl -X POST -H "Authorization: Bearer B4KAVFKVKFEQKPG2D3BEPZUTXMYCPQAVBS62JNJUJ6SLGGMZGMWWRZCEKXN7DSDG3BXNPAOOWIAWUM4WTIJDXANWQZNMTC6QCERWBJI" -H "Cache-Control: no-cache" -H "Content-Type: multipart/form-data" -F "type=text-intent" -F "path=https://drive.google.com/file/d/1-l2N8I4S1u24Drycq1BCxUjN03VrTHmo/view?usp=sharing" https://api.einstein.ai/v2/language/datasets/upload
 
 //Get the Dataset Status
 curl -X GET -H "Authorization: Bearer <TOKEN>" -H "Cache-Control: no-cache" https://api.einstein.ai/v2/language/datasets/<DATASET_ID>
